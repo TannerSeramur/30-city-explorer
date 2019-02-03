@@ -40,28 +40,43 @@ A class that takes in details and type props from renderLocationDetails in Locat
 
 #### `Home.js`
 ##### Exported Values and Methods
-###### handleSubmit 
+###### handleSubmit(e)
+Takes in event and appends the url with the user input location (state.userLocation)
 
+###### handleChange(E)
+Takes in event and sets the state.userlocation of the event object to user input.
+
+###### render()
+Renders the home/landing page
 
 #### `Location.js`
 ##### Exported Values and Methods
+###### componentDidMount()
+An async function that runs getLocationDetails when page loads
 
-### Setup
-#### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+###### getLocationDetails()
+An async function that gets location details and sets state
+
+###### getResource(resource, location)
+An asyn function that updates state of each resource in our state object
+
+###### handleChange(e)
+Handles new search input, updates state. Also changes state of location
+
+###### handleSubmit(e)
+Updates the URL
+
+###### renderLocationDetails()
+Runs loading bar until it gets state 
+
+###### render()
+Renders the data
+
 
 #### Running the app
 * `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
   
 #### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+* Run tests: npm test
 
-#### UML
-Link to an image of the UML for your application and response to events
+
