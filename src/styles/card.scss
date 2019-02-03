@@ -5,3 +5,41 @@
   border-radius: 10px;
   
 }
+
+.yelpCard{
+  margin: 5px 0;
+  padding:10px;
+  background-color:rgba(0,0,0,.02);
+  border-radius: 10px;
+
+  img {
+    width: 75px;
+  }
+}
+
+.meetupCard{
+  margin: 5px 0;
+  padding:10px;
+  background-color:rgba(0,0,0,.02);
+  border-radius: 10px;
+  
+}
+
+.trailCard{
+  margin: 5px 0;
+  padding:10px;
+  background-color:rgba(0,0,0,.02);
+  border-radius: 10px;
+}
+
+.moviesCard{
+  margin: 5px 0;
+  padding:10px;
+  background-color:rgba(0,0,0,.02);
+  border-radius: 10px;
+
+  span {
+    font-weight: bolder;
+    color: green;
+  }
+}
