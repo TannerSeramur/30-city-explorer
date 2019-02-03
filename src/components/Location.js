@@ -73,6 +73,10 @@ export class Location extends Component {
           <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude}%2c%20${this.state.longitude}&zoom=12&size=400x300&maptype=roadmap&key=AIzaSyDp0Caae9rkHUHwERAFzs6WN4_MuphTimk`} alt="" />
         </div>
         <Deck details={this.state.weather} type={'weather'} />
+        <Deck details={this.state.yelp} type={'yelp'} />
+        <Deck details={this.state.meetup} type={'meetup'} />
+        <Deck details={this.state.trails} type={'trails'} />
+        <Deck details={this.state.movies} type={'movies'} /> 
         {/* <Deck details={this.state.movies} />
         <Deck details={this.state.yelp} />
         <Deck details={this.state.meetups} />
