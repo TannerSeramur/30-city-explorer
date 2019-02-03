@@ -14,9 +14,9 @@ export default function Card({ details, type }) {
     );
   }
 
-  if(type === 'yelp') {
+  if (type === 'yelp') {
     const { url, name, rating, price, image_url } = details;
-  
+
     return (
       <div className='yelpCard'>
         <a href={url}>{name}</a>
@@ -26,7 +26,7 @@ export default function Card({ details, type }) {
     );
   }
 
-  if(type === 'meetup') {
+  if (type === 'meetups') {
     const { link, name, host, creation_date } = details;
 
     return (
@@ -38,9 +38,9 @@ export default function Card({ details, type }) {
     );
   }
 
-  if(type === 'trails') {
+  if (type === 'trails') {
     const { trail_url, name, location, length, condition_date, condition_time, conditions, stars, star_votes } = details;
-    
+
     return (
       <div className='trailCard'>
         <div>Hike Name: <a href={trail_url}>{name}</a></div>
@@ -52,9 +52,9 @@ export default function Card({ details, type }) {
     );
   }
 
-  if(type === 'movies') {
+  if (type === 'movies') {
     const { title, released_on, total_votes, average_votes, popularity, image_url, overview } = details;
-    
+
     return (
       <div className='moviesCard'>
         <div><span>{title}</span> was realeased on {released_on}.</div>
@@ -64,5 +64,5 @@ export default function Card({ details, type }) {
       </div>
     );
   }
-  
+
 }

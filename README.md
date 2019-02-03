@@ -6,8 +6,8 @@
 ### Author: Student/Group Name
 
 ### Links and Resources
-* [repo](http://xyz.com)
-* [travis](http://xyz.com)
+* [repo](https://github.com/TannerSeramur/30-city-explorer)
+* [travis](https://www.travis-ci.com/TannerSeramur/30-city-explorer)
 * [back-end](http://xyz.com) (when applicable)
 * [front-end](http://xyz.com) (when applicable)
 
@@ -16,7 +16,7 @@
 * [jsdoc](http://xyz.com) (All assignments)
 
 ### Modules
-#### `modulename.js`
+#### `App.js`
 ##### Exported Values and Methods
 
 ###### `foo(thing) -> string`
@@ -24,6 +24,27 @@ Usage Notes or examples
 
 ###### `bar(array) -> array`
 Usage Notes or examples
+
+#### `App.js`
+##### Exported Values and Methods
+
+#### `Card.js`
+##### Exported Values and Methods
+###### `Card({ details, type })
+A class that takes in details and type props from Deck.js and returns jsx containing and html elements data for each
+
+#### `Deck.js`
+##### Exported Values and Methods
+###### `Deck({ details, type })
+A class that takes in details and type props from renderLocationDetails in Location.js and returning some formatting container jsx for the cards
+
+#### `Home.js`
+##### Exported Values and Methods
+###### handleSubmit 
+
+
+#### `Location.js`
+##### Exported Values and Methods
 
 ### Setup
 #### `.env` requirements
