@@ -46,3 +46,14 @@ h2{
       text-align: center;
       padding: 5px 0;
     }
+
+    @media only screen and (min-width : 800px){
+      .deck-container{
+        display: flex;
+        justify-content: space-between;
+      }
+      Deck{
+        margin: 10px;
+      }
+     
+    }

@@ -11,7 +11,7 @@ export class Location extends Component {
     longitude: '',
     weather: [],
     yelp: [],
-    meetup: [],
+    meetups: [],
     movies: [],
     trails: [],
     isLoading: true
@@ -46,6 +46,10 @@ export class Location extends Component {
 
   getResource = async (resource, location) => {
     let data = await superagent.get(`https://city-explorer-backend.herokuapp.com/${resource}`, { data: location })
+    console.log(resource, 'ressource HERE');
+    console.log(data.body, 'DATA HERE');
+
+
     this.setState({ [resource]: data.body })
   }
   // ✅  handles new search input, updates state
@@ -72,11 +76,13 @@ export class Location extends Component {
           <h2>{this.state.location}</h2>
           <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude}%2c%20${this.state.longitude}&zoom=12&size=400x300&maptype=roadmap&key=AIzaSyDp0Caae9rkHUHwERAFzs6WN4_MuphTimk`} alt="" />
         </div>
-        <Deck details={this.state.weather} type={'weather'} />
-        <Deck details={this.state.yelp} type={'yelp'} />
-        <Deck details={this.state.meetup} type={'meetup'} />
-        <Deck details={this.state.trails} type={'trails'} />
-        <Deck details={this.state.movies} type={'movies'} /> 
+        <div class="deck-container">
+          <Deck details={this.state.weather} type={'weather'} />
+          <Deck details={this.state.yelp} type={'yelp'} />
+          <Deck details={this.state.meetups} type={'meetups'} />
+          <Deck details={this.state.trails} type={'trails'} />
+          <Deck details={this.state.movies} type={'movies'} />
+        </div>
         {/* <Deck details={this.state.movies} />
         <Deck details={this.state.yelp} />
         <Deck details={this.state.meetups} />
