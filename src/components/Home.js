@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import '../styles/reset.scss';
+import '../styles/home.scss';
 
 
 class Home extends Component {
@@ -18,11 +20,11 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        <h1>City Exporer</h1>
-        <h4>Enter a Location</h4>
+      <div className="home">
+        <h1>Welcome to City Exporer</h1>
+        <div className='line' />
         <form onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleChange} placeholder="enter a location" />
+          <input className="textBox" type="text" onChange={this.handleChange} placeholder="enter a location" />
           <button>Explore!</button>
         </form>
       </div>

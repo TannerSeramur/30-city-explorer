@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import superagent from 'superagent';
 import Deck from './Deck';
+import '../styles/location.scss';
 
 export class Location extends Component {
   state = {
@@ -27,8 +28,6 @@ export class Location extends Component {
   // ✅  gets location details and sets state
   getLocationDetails = async () => {
     const { location } = this.props.match.params;
-
-    console.log('getting location ', location)
     let data = await superagent.get(`https://city-explorer-backend.herokuapp.com/location`, { data: this.state.userLocation || location });
     const { formatted_query, latitude, longitude } = data.body;
     this.setState({
@@ -69,9 +68,10 @@ export class Location extends Component {
 
     return (
       <div>
-        <h2>Here are the results for {this.state.location}</h2>
-        <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude}%2c%20${this.state.longitude}&zoom=13&size=600x300&maptype=roadmap
-  &key=AIzaSyDp0Caae9rkHUHwERAFzs6WN4_MuphTimk`} />
+        <div className="map">
+          <h2>{this.state.location}</h2>
+          <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude}%2c%20${this.state.longitude}&zoom=12&size=400x300&maptype=roadmap&key=AIzaSyDp0Caae9rkHUHwERAFzs6WN4_MuphTimk`} alt="" />
+        </div>
         <Deck details={this.state.weather} type={'weather'} />
         {/* <Deck details={this.state.movies} />
         <Deck details={this.state.yelp} />
@@ -84,15 +84,14 @@ export class Location extends Component {
 
   render() {
     return (
-      <div>
-        <div className="search">
-          <h1>City Exporer</h1>
-          <h4>Enter a Location</h4>
-          <form onSubmit={this.handleSubmit}>
-            <input type="text" onChange={this.handleChange} placeholder="enter a location" value={this.state.userLocation} />
+      <div className="location">
+        <h4>City Explorer</h4>
+        <form onSubmit={this.handleSubmit}>
+          <div className="search">
+            <input className='input' type="text" onChange={this.handleChange} placeholder="New location" value={this.state.userLocation} />
             <button>Explore!</button>
-          </form>
-        </div>
+          </div>
+        </form>
         {this.renderLocationDetails()}
       </div>
     );
