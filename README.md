@@ -8,7 +8,6 @@
 ### Links and Resources
 * [repo](https://github.com/TannerSeramur/30-city-explorer)
 * [travis](https://www.travis-ci.com/TannerSeramur/30-city-explorer)
-* [back-end](http://xyz.com) (when applicable)
 * [front-end](http://xyz.com) (when applicable)
 
 #### Documentation
@@ -16,14 +15,6 @@
 * [jsdoc](http://xyz.com) (All assignments)
 
 ### Modules
-#### `App.js`
-##### Exported Values and Methods
-
-###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples
 
 #### `App.js`
 ##### Exported Values and Methods
