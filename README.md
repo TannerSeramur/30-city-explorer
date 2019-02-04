@@ -10,10 +10,6 @@
 * [travis](https://www.travis-ci.com/TannerSeramur/30-city-explorer)
 * [front-end](http://xyz.com) (when applicable)
 
-#### Documentation
-* [swagger](http://xyz.com) (API assignments only)
-* [jsdoc](http://xyz.com) (All assignments)
-
 ### Modules
 
 #### `App.js`
