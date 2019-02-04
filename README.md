@@ -1,9 +1,9 @@
 ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 =================================================
 
-## Project Name
+## City Explorer
 
-### Author: Student/Group Name
+### Author: Tanner Seramur & Jacob Anderson
 
 ### Links and Resources
 * [repo](https://github.com/TannerSeramur/30-city-explorer)
