@@ -29,5 +29,8 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "https://city-explorer-backend.herokuapp.com"
+  "proxy": "https://city-explorer-backend.herokuapp.com",
+  "devDependencies": {
+    "terser": "^3.14.1"
+  }
 }

@@ -8,7 +8,7 @@
 ### Links and Resources
 * [repo](https://github.com/TannerSeramur/30-city-explorer)
 * [travis](https://www.travis-ci.com/TannerSeramur/30-city-explorer)
-* [front-end](http://xyz.com) (when applicable)
+* [front-end](http://city-explorer-tanner-jake.s3-website.us-east-2.amazonaws.com/)
 
 ### Modules
 
